@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Movie recommendation based on plot</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Abiflix</h1>
+
+    <div class="form">
+        <form action="/" method="POST">
+            <p>Enter movie to get similar</p>
+
+            <input type="text" name="content" id="content">
+            <input type="submit" value="get movies">
+            <br>
+            <p>Or Enter movie to get movie plot</p>
+            <input type="text" name="plot"  id="plot">
+            <input type="submit" value="get movie plot">
+
+
+        </form>
+    </div>
+</div>
+{% endblock %}
